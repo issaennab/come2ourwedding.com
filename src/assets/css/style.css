@@ -82,7 +82,8 @@ html, body { padding:0; margin:0; height:100%;}
 body {
 	font:14px/24px Arial, Helvetica, sans-serif ;
 	color:#a8a8a8;
-	background: #fff;
+	/* background: #fff; */
+	background: black;
 	min-width:300px;
 	}
 .main{
@@ -96,7 +97,8 @@ body {
 	/*width: 1110px;*/
 	margin:0 auto;
 	padding-bottom:0;
-	background: #fafaf7;
+	/* background: #fafaf7; */
+	background: black;
 }
 #back-top {
   position: fixed;
@@ -150,8 +152,9 @@ h2.v5{margin-bottom: 34px;}
 .date_section{
 	font:bold 30px/25px 'Tinos', Arial, sans-serif;
 	font-style: italic;
-	color: #ff755e;
-	margin-top: 26px;
+	/* color: #ff755e; */
+	color: #f6c242;
+	margin-top: 40px;
 	margin-right: 9px;
 	text-align: right;
 	float: right;
@@ -165,7 +168,8 @@ h3{
 }
 h3.v2{
 	text-align: center;
-	color: #a1a1a0;
+	/* color: #a1a1a0; */
+	color: white;
 	margin-bottom: 45px;
 }
 h3.v3{margin-top: -3px; margin-bottom: 18px;}
@@ -289,7 +293,7 @@ header.marbot2{margin-bottom: 56px;}
 	width: 110px;
 	height: 110px;
 	text-align: center;
-	background: #ff755e;
+	background: #f6c242;
 	margin-bottom: 8px;
 	margin-right: 0px;
 	font:60px/110px 'Tinos', Arial, sans-serif;

@@ -14,7 +14,8 @@ function countIt(){
     /*end code for demonstration*/
     
     setTimeout(function(){
-    endDate = new Date(year, month, day, hours, minutes, seconds, 00);
+    // endDate = new Date(year, month, day, hours, minutes, seconds, 00);
+    endDate = new Date("September 02, 2018, 18:30:00");
     thisDate  = new Date();
     // thisDate  = new Date(thisDate.getFullYear(), thisDate.getMonth() + 1, thisDate.getDay(), thisDate.getHours(), thisDate.getMinutes(), thisDate.getSeconds(), 00, 00);
 
