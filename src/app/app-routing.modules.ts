@@ -9,7 +9,7 @@ import { RSVPComponent } from './rsvp.component'
 
 export const appRoutes: Routes = [
 
-    { path: 'main', component: MainComponent },
+    { path: 'main', component: MainComponent, redirectTo: '',},
     { path: 'weekend-events', component: WeekendEventComponent },
     { path: 'guest-info', component: GuestInfoComponent },
     { path: 'gallery', component: GalleryComponent },
