@@ -1,70 +1,126 @@
-<div class="container_12" style="margin-top: 8%; margin-bottom: 20%">
+<!--div class="container_12" style="margin-top: 8%; margin-bottom: 20%">
     <div class="grid_12">
 
         <h3 class="v2"> You are invited to our wedding celebration! Please RSVP by July 31st so we can accommodate you. </h3>
-<!--
-Will you be attending? (DROP-DOWN OR CHECK-BOX) Yes/ No
-Meal choice: Chicken/ Beef (SELECT ONE)
-Allergies/Dietary Restrictions? (TEXT)
-Are you bringing a guest? (DROP-DOWN OR CHECK-BOX) Yes/No
-Your guest’s full name: (TEXT)
-Meal choice: Chicken/Beef (SELECT ONE)
-Allergies/Dietary Restrictions? (TEXT)
-Songs you’d like to suggest for the party? (TEXT)
--->
-<div class="grid_4">
-    <h2 class="hline2 v3">RSVP Form</h2>
 
-    <form id="form">
-        <div class="success_wrapper">
-          <div class="success">Contact form submitted!<br>
-          <strong>We will be in touch soon.</strong> </div>
+        <div class="grid_4">
+            <h2 class="hline2 v3">RSVP Form</h2>
+
+            <form id="form">
+                <div class="success_wrapper">
+                    <div class="success">Contact form submitted!<br>
+                        <strong>We will be in touch soon.</strong> </div>
+                </div>
+                <fieldset>
+
+                    <label class="name">
+                        <input type="text" value="Your full name">
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <label class="email">
+                        <input type="text" value="Your email">
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <label class="email">
+                        Will you be attending?
+                        <select>
+                            <option value="volvo">Please Select</option>
+                            <option value="volvo">Yes</option>
+                            <option value="saab">No</option>
+                        </select>
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <label class="email">
+                        Are you bringing a guest?
+                        <select>
+                            <option value="volvo">Please Select</option>
+                            <option value="volvo">Yes</option>
+                            <option value="saab">No</option>
+                        </select>
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <div style="">
+                        <div style="width: 60%; float: left; font-size: 120%"> Meal choice: </div>
+                        <div style="float: left; width: 40%; ">
+                            <select style="font-size: 110%">
+                                <option value="volvo">Please Select</option>
+                                <option value="volvo">Chicken</option>
+                                <option value="saab">Beef</option>
+                            </select>
+                            <br class="clear">
+                            <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <label class="name">
+                        <input type="tel" value="Allergies/Dietary Restrictions?">
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <label class="name">
+                        <input type="tel" value="Your guest's full name:">
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <label class="name">
+                        <input type="tel" value="Your guest's full name:">
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <label class="name">
+                        <input type="tel" value="Songs you’d like to suggest for the party?">
+                        <br class="clear">
+                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
+                    </label>
+
+                    <div class="clear"></div>
+                    <div class="btns">
+                        <a data-type="submit" class="more_btn">Submit</a>
+                        <div class="clear"></div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
-        <fieldset>
-            <label class="name">
-                <input type="text" value="Your full name">
-                <br class="clear">
-                <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> 
-            </label>
-            <label class="email">
-                <input type="text" value="Your email">
-                <br class="clear">
-                <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
-            </label>
-
-            <label class="email">
-                Meal choice:
-                <select>
-                    <option value="volvo">Chicken</option>
-                    <option value="saab">Beef</option>
-                </select>
-                <br class="clear">
-                <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
-            </label>
-
-            <select>
-                <option value="volvo">Chicken</option>
-                <option value="saab">Beef</option>
-            </select>
-              
-            <label class="phone">
-                <input type="tel" value="Phone">
-                <br class="clear">
-                <span class="error error-empty">*This is not a valid phone number.</span><span class="empty error-empty">*This field is required.</span> 
-            </label>
-            <label class="message">
-                <textarea>Message</textarea>
-                <br class="clear">
-                <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> 
-            </label>
-            <div class="clear"></div>
-            <div class="btns">
-                <a data-type="submit" class="more_btn">Submit</a>
-                <div class="clear"></div>
-            </div>
-        </fieldset>
-    </form>
-</div>
 
     </div>
+</div-->
+
+
+<div class="container_12" style="margin-top: 5%; margin-bottom: 20%">
+
+
+        <h3 class="v2"> You are invited to our wedding celebration! Please RSVP by July 31st so we can accommodate you. </h3>
+
+        <div class="grid_12">
+            <h2 class="hline2 v3">RSVP Form</h2>
+
+            <div class="form-style-2">
+                
+                <form action="" method="post">
+                    <label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
+                    <label for="field2"><span>Email <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
+                    <label><span>Telephone</span><input type="text" class="tel-number-field" name="tel_no_1" value="" maxlength="4" />-<input type="text" class="tel-number-field" name="tel_no_2" value="" maxlength="4"  />-<input type="text" class="tel-number-field" name="tel_no_3" value="" maxlength="10"  /></label>
+                    <label for="field4"><span>Regarding</span><select name="field4" class="select-field">
+                        <option value="General Question">General</option>
+                        <option value="Advertise">Advertisement</option>
+                        <option value="Partnership">Partnership</option>
+                        </select></label>
+                    <label for="field5"><span>Message <span class="required">*</span></span><textarea name="field5" class="textarea-field"></textarea></label>
+
+                    <label><span>&nbsp;</span><input type="submit" value="Submit" /></label>
+                </form>
+            </div>
+        </div>
 </div>
