@@ -203,7 +203,7 @@ a.link_cntr {
 }
 a:hover {
 	text-decoration:underline;
-	color: #000;
+	color: #D3BE3F;
 }
 a{
 	-webkit-transition:all 0.3s ease;

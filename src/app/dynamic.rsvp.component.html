@@ -1,0 +1,83 @@
+<div class="container_12" style="margin-top: 8%; margin-bottom: 20%; background-color: green">
+    <div class="grid_12">
+
+        <!--
+
+Your full name: (TEXT)
+Your email: (TEXT)
+Will you be attending? (DROP-DOWN OR CHECK-BOX) Yes/ No
+Meal choice: Chicken/ Beef (SELECT ONE)
+Allergies/Dietary Restrictions? (TEXT)
+Are you bringing a guest? (DROP-DOWN OR CHECK-BOX) Yes/No
+Your guest’s full name: (TEXT)
+Meal choice: Chicken/Beef (SELECT ONE)
+Allergies/Dietary Restrictions? (TEXT)
+Songs you’d like to suggest for the party? (TEXT)
+        -->
+
+        <h2 class="hline2" style="font-size: 180%; color: #fff">
+            You are invited to our wedding celebration! Please RSVP by July 31<span style="vertical-align: top;">st</span>            so we can accommodate you.
+        </h2>
+
+        <h3 style="color: #fff; font-size: 180%"> Guest List: </h3>
+        <ul class="guestList" style="font-size: 130%; ">
+            <li *ngFor="let guest of guestList" [class.selected]="guest === selectedGuest" (click)="onSelect(guest)">
+                <div style="width: 20%; float: left">
+                        {{guest.fullName}}
+                </div>
+                <div style="width: 20%; float: left">
+                        {{guest.email}}
+                </div>
+                <br/>
+            </li>
+        </ul>
+
+        <br/>
+        <input #txtName placeholder="your name" />
+        <tr *ngFor="let guest of guestList | searchfilter: txtName.value : guest">
+          <td style="color: #fff">
+              {{guest.email}}
+          </td>
+          <td style="color: #fff">
+              {{guest.fullName}}
+          </td>
+        </tr>
+
+        <div style="margin-top: 3%" *ngIf="selectedGuest">
+
+            <h2 style="color: #fff; font-size: 180%">{{ selectedGuest.fullName | uppercase }} Details</h2>
+            <div style="color: #fff; font-size: 110%">
+                
+                <div>
+                    <label>Will you be attending? </label>
+                </div>
+                <div>
+                    <div style="float: left; width: 5%;">
+                        <input name="options" ng-control="options" type="radio" [value]="284" [(ngModel)]="outOfCountry" (click)="resetCalculate()" style="font-size: 10px; float: left; margin-top: 12%">
+                        <div style="float: left;"> Yes </div>
+                    </div>
+                    <div style="float: left; width: 5%; ">
+                        <input name="options" ng-control="options" type="radio" [value]="285" [(ngModel)]="outOfCountry" (click)="resetCalculate()"style="font-size: 10px; float: left; margin-top: 12%">
+                        <div style="float: left"> No </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--input
+            (keyup)="searchTerm$.next($event.target.value)">
+        
+        <ul *ngIf="results">
+        <li *ngFor="let result of results | slice:0:9">
+            <a href="{{ result.latest }}" target="_blank">
+            {{ result.name }}
+            </a>
+        </li>
+        </ul-->
+        
+
+    </div>
+</div>
