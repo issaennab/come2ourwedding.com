@@ -3,21 +3,32 @@
 <div class="main">
   <div class="div-content">
     <!--==============================header=================================-->
+    
     <div class="container_12">
       <header>
+        
         <div class="container_12">
 
-          <h1><a href="index.html"><img width="50%" src="../assets/images/logo.png" alt=""></a> </h1>
-          <div class="date_section">2 September 2018</div>
-
+          <h1><a href="index.html"><img width="60%" src="../assets/images/logo.png" alt=""></a> </h1>
+          
+          <div class="date_section">
+            <!--languages-->
+            <div class="btn-group" style="color: white; padding-right: 1%; font-size: 50%; margin-bottom: 12%">
+                <a *ngFor="let lang of supportedLanguages" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
+                    {{ lang.display }}
+                </a>
+            </div>
+            
+            2 September 2018
+          </div>
 
           <div class="grid_12 txt_cntr">
             <nav>
               <ul class="sf-menu">
-                <li class="current"><a routerLink="/main"><span class="base_txt">home</span><span class="over_plane"></span></a></li>
-                <li><a routerLink="/weekend-events"><span class="base_txt">WEEKEND EVENTS</span><span class="over_plane"></span></a></li>
-                <li><a routerLink="/guest-info"><span class="base_txt">GUEST INFO</span><span class="over_plane"></span></a></li>
-                <li><a routerLink="/gallery"><span></span><span class="base_txt">gallery</span><span class="over_plane"></span></a></li>
+                <li class="current"><a routerLink="/main"><span class="base_txt">{{ 'main' | translate }}</span><span class="over_plane"></span></a></li>
+                <li><a routerLink="/weekend-events"><span class="base_txt">{{ 'weekend event' | translate }}</span><span class="over_plane"></span></a></li>
+                <li><a routerLink="/guest-info"><span class="base_txt">{{ 'guest info' | translate }} </span><span class="over_plane"></span></a></li>
+                <li><a routerLink="/gallery"><span></span><span class="base_txt">{{ 'gallery' | translate }}</span><span class="over_plane"></span></a></li>
                 <li id="last-li"><a routerLink="/rsvp"><span class="base_txt">RSVP</span><span class="over_plane"></span></a></li>
               </ul>
             </nav>

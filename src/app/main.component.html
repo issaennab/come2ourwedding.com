@@ -25,15 +25,17 @@
         </div>
     </div> -->
 
+    
+    
     <div class="container_12" style="margin-top: 2.5%">
       <div class="grid_12">
         <h2 class="hline2">Estérel Resort</h2>
         <h3 class="v2">39 Chemin Fridolin-Simard, Estérel, QC J0T 1E0 </h3>
-
-        <!--div class="txt_cntr">
+        <!--
+        <div class="txt_cntr">
           <div class="dis-inblock">
             <div class="counter_section">
-              <div class="plane">118</div>
+              <div class="plane">{{days}}</div>
               <p>days</p>
             </div>
             <div class="counter_separate"></div>
@@ -48,12 +50,12 @@
             </div>
             <div class="counter_separate"></div>
             <div class="counter_section">
-              <div class="plane">34</div>
+              <div class="plane">{{seconds}}</div>
               <p>seconds</p>
             </div>
           </div>
-        </div-->
-
+        </div>
+      -->
         <div id="counter"></div>
 
         <div class="container_12">
@@ -72,3 +74,22 @@
       </div>
 
     </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+    
+        jQuery('#camera_wrap').camera({
+          loader: false,
+          pagination: false,
+          thumbnails: false,
+          height: '30.208333%',
+          fx: 'blindCurtainTopLeft',
+          rows: '1',
+          slicedCols: '1',
+          slicedRows: '3',
+          caption: false
+        });
+    
+      });
+    
+    </script>

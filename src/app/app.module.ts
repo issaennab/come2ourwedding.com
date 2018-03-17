@@ -12,6 +12,8 @@ import { GalleryComponent } from './gallery.component'
 import { RSVPComponent } from './rsvp.component'
 import { SearchFilterPipe } from './search.component'
 
+import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,14 +22,15 @@ import { SearchFilterPipe } from './search.component'
     GuestInfoComponent,
     GalleryComponent,
     RSVPComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [TRANSLATION_PROVIDERS, TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
