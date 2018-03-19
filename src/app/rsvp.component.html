@@ -97,6 +97,23 @@
     </div>
 </div-->
 
+<!--<form id="contact-form" method="POST" action="assets/email.php">-->
+<!--form (submit)="sendEmail(message)">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Your Name" [(ngModel)]="message.name">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="Your Email" [(ngModel)]="message.email">
+    </div>
+    <div>
+        <label for="message">Message</label>
+        <textarea rows="6" name="message" [(ngModel)]="message.message"></textarea>
+    </div>
+    <button type="submit">Send Email</button>
+</form-->
+
 
 <div class="container_12" style="margin-top: 5%; margin-bottom: 10%">
 
@@ -104,51 +121,93 @@
         <h3 class="v2"> {{ 'You are invited to our wedding celebration! Please RSVP by July 31st so we can accommodate you.' | translate }} </h3>
 
         <div class="grid_12">
-            <h2 class="hline2 v3">RSVP {{ 'Form' | translate }}</h2>
+            <h2 class="hline2 v3">RSVP</h2>
 
             <div class="form-style-2">
                 
-                <form action="" method="post">
-                    <label for="field1"><span> {{ 'Full Name' | translate }} <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
-                    <label for="field2"><span> {{ 'Email' | translate }} <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
-                    <!--label><span>Telephone</span><input type="text" class="tel-number-field" name="tel_no_1" value="" maxlength="4" />-<input type="text" class="tel-number-field" name="tel_no_2" value="" maxlength="4"  />-<input type="text" class="tel-number-field" name="tel_no_3" value="" maxlength="10"  /></label-->
+                <form method="post" (submit)="sendEmail(message)">
                     
-                    <label for="field4"><span> {{ 'Are you bringing a guest?' | translate }} <span class="required">*</span></span>
-                        <select name="field4" class="select-field">
-                            <option value="General Question"> {{ 'Please Select' | translate }} </option>
-                            <option value="Advertise">{{ 'Yes' | translate }}</option>
-                            <option value="Partnership">{{ 'No' | translate }}</option>
-                            </select>
+                    <label for="fullName">
+                        <span> {{ 'Full Name' | translate }} 
+                            <span class="required">*</span>
+                        </span>
+                         <input type="text" class="input-field" name="fullName" value="" [(ngModel)]="message.fullName"/>
                     </label>
-                    <label for="field4"><span> {{ 'Meal choice:' | translate }} </span>
-                        <select name="field4" class="select-field">
-                            <option value="General Question"> {{ 'Please Select' | translate }} </option>
-                            <option value="Advertise">{{ 'Chicken' | translate }}</option>
-                            <option value="Partnership">{{ 'Beef' | translate }}</option>
-                            </select>
-                    </label>
-                    <label for="field1"><span>{{ 'Allergies/Dietary Restrictions?' | translate }} </span><input type="text" class="input-field" name="field1" value="" /></label>
 
-                    <label for="field4"><span> {{ 'Are you bringing a guest?' | translate }} <span class="required">*</span></span>
-                        <select name="field4" class="select-field">
-                            <option value="General Question"> {{ 'Please Select' | translate }} </option>
-                            <option value="Advertise">{{ 'Yes' | translate }}</option>
-                            <option value="Partnership">{{ 'No' | translate }}</option>
-                            </select>
+                    <label for="email">
+                        <span> {{ 'Email' | translate }} 
+                                <span class="required">*</span>
+                        </span>
+                        <input type="text" class="input-field" name="email" value="" [(ngModel)]="message.email"/>
                     </label>
-                    <label for="field4"><span> {{ 'Meal choice:' | translate }} </span>
-                        <select name="field4" class="select-field">
-                            <option value="General Question"> {{ 'Please Select' | translate }} </option>
-                            <option value="Advertise">{{ 'Chicken' | translate }}</option>
-                            <option value="Partnership">{{ 'Beef' | translate }}</option>
-                            </select>
-                    </label>
-                    <label for="field1"><span>{{ 'Allergies/Dietary Restrictions?' | translate }} </span><input type="text" class="input-field" name="field1" value="" /></label>
 
-                    <label for="field1"><span>{{ 'Songs you’d like to suggest for the party?' | translate }} </span><input type="text" class="input-field" name="field1" value="" /></label>
+                    <label for="isAttending">
+                        <span> {{ 'Will you be attending?' | translate }} 
+                            <span class="required">*</span>
+                        </span>
+                        <select name="isGuestComing" class="select-field" [(ngModel)]="message.isAttending">
+                            <option value="No selection"> {{ 'Please Select' | translate }} </option>
+                            <option value="{{ 'Yes' | translate }}">{{ 'Yes' | translate }}</option>
+                            <option value="{ 'No' | translate }}">{{ 'No' | translate }}</option>
+                        </select>
+                    </label>
+                    
+                    <label for="mealChoice"><span> {{ 'Meal choice:' | translate }} </span>
+                        <select name="mealChoice" class="select-field" [(ngModel)]="message.mealChoice">
+                            <option value="No selection"> {{ 'Please Select' | translate }} </option>
+                            <option value="{{ 'Chicken' | translate }}">{{ 'Chicken' | translate }}</option>
+                            <option value="{{ 'Beef' | translate }}">{{ 'Beef' | translate }}</option>
+                        </select>
+                    </label>
+
+                    <label for="allergies">
+                        <span>{{ 'Allergies/Dietary Restrictions?' | translate }} </span>
+                        <input type="text" class="input-field" name="allergies1" value="" [(ngModel)]="message.allergies"/>
+                    </label>
+
+                    <label for="isGuestComing">
+                        <span> {{ 'Are you bringing a guest?' | translate }} 
+                            <span class="required">*</span>
+                        </span>
+                        <select name="isGuestComing" class="select-field" [(ngModel)]="message.isGuestComing">
+                            <option value="No selection"> {{ 'Please Select' | translate }} </option>
+                            <option value="{{ 'Yes' | translate }}">{{ 'Yes' | translate }}</option>
+                            <option value="{ 'No' | translate }}">{{ 'No' | translate }}</option>
+                        </select>
+                    </label>
+
+                    <div *ngIf="isGuestComing == 'Yes'"> PASS </div>
+                    <label for="guestFullName">
+                        <span> {{ 'Your Guest\'s Full Name:' | translate }} 
+                            <span class="required">*</span>
+                        </span>
+                            <input type="text" class="input-field" name="fullName" value="" [(ngModel)]="message.guestFullName"/>
+                    </label>
+
+                    <label for="mealChoicePlusOne"><span> {{ 'Meal choice:' | translate }} </span>
+                        <select name="mealChoicePlusOne" class="select-field" [(ngModel)]="message.mealChoicePlusOne">
+                            <option value="No selection"> {{ 'Please Select' | translate }} </option>
+                            <option value="{{ 'Chicken' | translate }}">{{ 'Chicken' | translate }}</option>
+                            <option value="{{ 'Beef' | translate }}">{{ 'Beef' | translate }}</option>
+                        </select>
+                    </label>
+
+                    <label for="allergiesPlusOne">
+                        <span>{{ 'Allergies/Dietary Restrictions?' | translate }} </span>
+                        <input type="text" class="input-field" name="allergies1" value="" [(ngModel)]="message.allergiesPlusOne"/>
+                    </label>
+
+                    <label for="songsSuggestion">
+                        <span>
+                            {{ 'Songs you’d like to suggest for the party?' | translate }} 
+                        </span>
+                        <input type="text" class="input-field" name="field1" value="" [(ngModel)]="message.songsSuggestion"/>
+                    </label>
                     <!--label for="field5"><span>Message <span class="required">*</span></span><textarea name="field5" class="textarea-field"></textarea></label-->
 
-                    <label><span>&nbsp;</span><input type="submit" value="Submit" /></label>
+                    
+                    <button type="submit"> Submit </button>
+                    
                 </form>
             </div>
         </div>

@@ -11,8 +11,9 @@ import { GuestInfoComponent } from './guest-info.component'
 import { GalleryComponent } from './gallery.component'
 import { RSVPComponent } from './rsvp.component'
 import { SearchFilterPipe } from './search.component'
-
+import { RSVPService } from './rsvp.service'
 import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,16 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
     GalleryComponent,
     RSVPComponent,
     SearchFilterPipe,
-    TranslatePipe
+    TranslatePipe,
+    RSVPComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule
   ],
-  providers: [TRANSLATION_PROVIDERS, TranslateService],
+  providers: [TRANSLATION_PROVIDERS, TranslateService, RSVPService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
