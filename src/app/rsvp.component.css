@@ -1,79 +1,154 @@
-.form-style-2{
-    margin-left: 15%;
-    font-size: 120%;
-    font-family: 'Karma';
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ 
+.isa_info, .isa_success, .isa_warning, .isa_error {
+margin: 10px 0px;
+padding:12px;
+ 
 }
-.form-style-2-heading{
-    font-weight: bold;
-    font-style: italic;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 20px;
-    font-size: 15px;
-    padding-bottom: 3px;
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
 }
-.form-style-2 label{
-    display: block;
-    margin: 0px 0px 15px 0px;
+.isa_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
 }
-.form-style-2 label > span{
-    width: 38%;
-    font-weight: bold;
-    float: left;
-    padding-top: 8px;
-    padding-right: 5px;
+.isa_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
 }
-.form-style-2 span.required{
-    color:red;
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
 }
-.form-style-2 .tel-number-field{
-    width: 40px;
-    text-align: center;
+.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
 }
-.form-style-2 input.input-field, .form-style-2 .select-field{
-    width: 48%; 
+
+
+
+
+
+.form-style-1 {
+    margin:10px auto;
+    max-width: 100%;
+    padding: 20px 12px 10px 20px;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-.form-style-2 input.input-field, 
-.form-style-2 .tel-number-field, 
-.form-style-2 .textarea-field, 
- .form-style-2 .select-field{
+
+
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=tim],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+select{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    border: 1px solid #C2C2C2;
-    box-shadow: 1px 1px 4px #EBEBEB;
-    -moz-box-shadow: 1px 1px 4px #EBEBEB;
-    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    border:1px solid #BEBEBE;
     padding: 7px;
-    outline: none;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
 }
-.form-style-2 .input-field:focus, 
-.form-style-2 .tel-number-field:focus, 
-.form-style-2 .textarea-field:focus,  
-.form-style-2 .select-field:focus{
-    border: 1px solid #0C0;
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
 }
-.form-style-2 .textarea-field{
-    height:100px;
-    width: 55%;
+.form-style-1 .field-divided{
+    width: 97%;
 }
-.form-style-2 input[type=submit],
-.form-style-2 input[type=button]{
-    border: none;
-    padding: 8px 15px 8px 15px;
+
+.form-style-1 .field-long{
+    width: 100%;
+}
+.form-style-1 .field-select{
+    width: 97%;
+    height: 30px;
+}
+.form-style-1 .field-textarea{
+    height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
     background: #f6c242;
-    color: #fff;
-    box-shadow: 1px 1px 4px #DADADA;
-    -moz-box-shadow: 1px 1px 4px #DADADA;
-    -webkit-box-shadow: 1px 1px 4px #DADADA;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-}
-.form-style-2 input[type=submit]:hover,
-.form-style-2 input[type=button]:hover{
-    background: #D7A52D;
+    padding: 8px 15px 8px 15px;
+    border: none;
     color: #fff;
 }
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #fcc53b;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form-style-1 .required{
+    color:red;
+}
+
+@media only screen 
+and (max-device-width: 1920px)
+{
+
+    .form-style-1 label {
+        margin:0 0 3px 0;
+        padding:0px;
+        display:block;
+        font-weight: bold;
+        font-size: 100%;
+        height: 20px;
+    }
+
+    .form-style-1 li {
+        padding-right: 1%;
+        display: block;
+        list-style: none;
+        width: 48.5%;
+        margin-bottom: 1.5%;
+        float: left;
+    }
+}
+
+@media all and (min-width:319px) and (max-width: 480px)
+{ 
+    .form-style-1 label{
+        margin:0 0 3px 0;
+        padding:0px;
+        display:block;
+        font-weight: bold;
+        font-size: 70%;
+        height: 20px;
+    }
+
+    .form-style-1 li {
+        padding-right: 1%;
+        display: block;
+        list-style: none;
+        width: 48.5%;
+        margin-bottom: 7%;
+        float: left;
+    }
+  }
+
+  

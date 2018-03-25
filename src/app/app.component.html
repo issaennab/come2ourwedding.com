@@ -13,10 +13,17 @@
           
           <div class="date_section">
             <!--languages-->
-            <div class="btn-group" style="color: white; padding-right: 1%; font-size: 50%; margin-bottom: 12%">
-                <a *ngFor="let lang of supportedLanguages" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
-                    {{ lang.display }}
-                </a>
+
+            <div class="btn-group" style="color: white; padding-right: 1%; font-size: 60%; margin-bottom: 10%">
+                <div *ngIf="getCurrentLang() == 'fr'">
+                    <a (click)="selectLang('en')" class="btn btn-default" [class.btn-primary]="isCurrentLang('en')"> English </a>
+                </div>
+                <div *ngIf="getCurrentLang() == 'en'">
+                    <a (click)="selectLang('fr')" class="btn btn-default" [class.btn-primary]="isCurrentLang('fr')"> Francais </a>
+                </div>
+                <!--a *ngFor="let lang of supportedLanguages" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
+                  {{ lang.display }}  
+                </a-->
             </div>
             
             2 {{ 'September' | translate }} 2018
@@ -25,7 +32,7 @@
           <div class="grid_12 txt_cntr">
             <nav>
               <ul class="sf-menu">
-                <li class="current"><a routerLink="/main"><span class="base_txt">{{ 'main' | translate }}</span><span class="over_plane"></span></a></li>
+                <li><a routerLink="/main"><span class="base_txt">{{ 'main' | translate }}</span><span class="over_plane"></span></a></li>
                 <li><a routerLink="/weekend-events"><span class="base_txt">{{ 'weekend event' | translate }}</span><span class="over_plane"></span></a></li>
                 <li><a routerLink="/guest-info"><span class="base_txt">{{ 'guest info' | translate }} </span><span class="over_plane"></span></a></li>
                 <li><a routerLink="/gallery"><span></span><span class="base_txt">{{ 'gallery' | translate }}</span><span class="over_plane"></span></a></li>

@@ -44,4 +44,8 @@ export class AppComponent implements OnInit {
     // refresh translation when language change
     this.translatedText = this._translate.instant('hello world');
   }
+
+  getCurrentLang() {
+    return this._translate.currentLang;
+  }
 }
