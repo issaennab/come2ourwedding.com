@@ -16,8 +16,6 @@
             <div data-src="../assets/images/slide3.jpg"></div>
         </div>
     </div> -->
-
-    
     
     <div class="container_12" style="margin-top: 2.5%">
       <div class="grid_12">
@@ -27,27 +25,27 @@
         <div class="txt_cntr">
           <div class="dis-inblock">
             <div class="counter_section">
-              <div class="plane">{{days}}</div>
+              <div class="plane">{{daysX | number : '0.0-0' }}</div>
               <p> {{ 'DAYS' | translate }} </p>
             </div>
             <div class="counter_separate"></div>
             <div class="counter_section">
-              <div class="plane">23</div>
+              <div class="plane">{{hoursX}}</div>
               <p>hours</p>
             </div>
             <div class="counter_separate"></div>
             <div class="counter_section">
-              <div class="plane">58</div>
+              <div class="plane">{{minsX}}</div>
               <p>minutes</p>
             </div>
             <div class="counter_separate"></div>
             <div class="counter_section">
-              <div class="plane">{{seconds}}</div>
+              <div class="plane">{{secX | number : '1.0-0'}}</div>
               <p>seconds</p>
             </div>
           </div>
         </div>
-      -->
+        -->
         <div id="counter"></div>
 
         <div class="container_12">

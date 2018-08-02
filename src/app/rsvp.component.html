@@ -1,119 +1,3 @@
-<!--div class="container_12" style="margin-top: 8%; margin-bottom: 20%">
-    <div class="grid_12">
-
-        <h3 class="v2"> You are invited to our wedding celebration! Please RSVP by July 31st so we can accommodate you. </h3>
-
-        <div class="grid_4">
-            <h2 class="hline2 v3">RSVP Form</h2>
-
-            <form id="form">
-                <div class="success_wrapper">
-                    <div class="success">Contact form submitted!<br>
-                        <strong>We will be in touch soon.</strong> </div>
-                </div>
-                <fieldset>
-
-                    <label class="name">
-                        <input type="text" value="Your full name">
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <label class="email">
-                        <input type="text" value="Your email">
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <label class="email">
-                        Will you be attending?
-                        <select>
-                            <option value="volvo">Please Select</option>
-                            <option value="volvo">Yes</option>
-                            <option value="saab">No</option>
-                        </select>
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <label class="email">
-                        Are you bringing a guest?
-                        <select>
-                            <option value="volvo">Please Select</option>
-                            <option value="volvo">Yes</option>
-                            <option value="saab">No</option>
-                        </select>
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <div style="">
-                        <div style="width: 60%; float: left; font-size: 120%"> Meal choice: </div>
-                        <div style="float: left; width: 40%; ">
-                            <select style="font-size: 110%">
-                                <option value="volvo">Please Select</option>
-                                <option value="volvo">Chicken</option>
-                                <option value="saab">Beef</option>
-                            </select>
-                            <br class="clear">
-                            <span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span>
-                        </div>
-                    </div>
-                    <br/>
-
-                    <label class="name">
-                        <input type="tel" value="Allergies/Dietary Restrictions?">
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <label class="name">
-                        <input type="tel" value="Your guest's full name:">
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <label class="name">
-                        <input type="tel" value="Your guest's full name:">
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <label class="name">
-                        <input type="tel" value="Songs you’d like to suggest for the party?">
-                        <br class="clear">
-                        <span class="error error-empty">*This is not a valid text</span><span class="empty error-empty">*This field is required.</span> 
-                    </label>
-
-                    <div class="clear"></div>
-                    <div class="btns">
-                        <a data-type="submit" class="more_btn">Submit</a>
-                        <div class="clear"></div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-
-    </div>
-</div-->
-
-<!--<form id="contact-form" method="POST" action="assets/email.php">-->
-<!--form (submit)="sendEmail(message)">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Your Name" [(ngModel)]="message.name">
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input type="text" name="email" placeholder="Your Email" [(ngModel)]="message.email">
-    </div>
-    <div>
-        <label for="message">Message</label>
-        <textarea rows="6" name="message" [(ngModel)]="message.message"></textarea>
-    </div>
-    <button type="submit">Send Email</button>
-</form-->
-
 
 <div class="container_12" style="margin-top: 5%; margin-bottom: 5%">
 
@@ -172,7 +56,7 @@
                     </label>
                     <input type="text" class="field-divided" name="allergies1" value="" [(ngModel)]="message.allergies" />
                 </li>
-                <li style="padding-top: 0%;">
+                <li>
                     <label for="isGuestComing">
                         {{ 'Are you bringing a guest?' | translate }}
                         <span class="required">*</span>
@@ -183,7 +67,7 @@
                         <option value="{ 'No' | translate }}">{{ 'No' | translate }}</option>
                     </select>
                 </li>
-                <li>
+                <li style="float: left;">
                     <label for="guestFullName">
                         {{ 'Your Guest\'s Full Name:' | translate }}
                         <span class="required">*</span>
@@ -213,9 +97,8 @@
                     <input type="text" class="field-divided" name="songs" value="" [(ngModel)]="message.songsSuggestion"/>
                 </li>
 
-                <li style="margin-bottom: 10%">
+                <li class="field-divided">
                     <input type="submit" value="Submit" />
-                    <!--button type="submit"> Submit </button-->
                 </li>
             </ul>
         </form>

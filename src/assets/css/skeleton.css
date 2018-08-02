@@ -174,7 +174,7 @@
         .container_12 .grid_9,
         .container_12 .grid_10,
         .container_12 .grid_11,
-        .container_12 .grid_12{width: 280px;}
+        .container_12 .grid_12{width: 100%}
 		/* Prefix Extra Space >> 12 Columns */
 		.container_12 .prefix_1,
 		.container_12 .prefix_2,

@@ -2,8 +2,8 @@ export const LANG_FR_NAME = 'fr';
 
 export const LANG_FR_TRANS = {
 
-    'main' : 'Acceuil',
-    'weekend event' : 'événements',
+    'main' : 'Accueil',
+    'Events' : 'événements',
     'guest info' : 'Info invités',
     'gallery' : 'Galerie',
     'September': 'Septembre',
@@ -13,7 +13,7 @@ export const LANG_FR_TRANS = {
 
     '16:30 Rehearsal (wedding party)' : '16:30 Répétition (participants au marriage)',
     '18:00 Rehearsal Dinner (wedding party) – Location TBD' : '18:00 Souper de répétition (participants au marriage) – Endroit à déterminer',
-    '21:00-23:00 Drinks by the pool - Esterel Resort' : '21:00-23:00 Détente à la piscine - Estérel',
+    '21:00-23:00 Drinks at the Bar - Esterel Resort' : '21:00-23:00 Drinks au Bar - Estérel',
     '07:30-10:30 Breakfast Buffet - Esterel Resort' : '07:30-10:30 Buffet Déjeuner - Estérel',
     '16:30 Ceremony - Esterel Resort' : '16:30 Cérémonie - Estérel',
     '17:30 Cocktails and Appetizers - Salle Dupuis and Terrace, Esterel Resort' : '17:30 Cocktails et amuse-gueules - Salle Dupuis et térrasse, Estérel',

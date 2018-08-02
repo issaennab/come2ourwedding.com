@@ -144,47 +144,79 @@ ul.sf-menu>li.current>a>span.over_plane, ul.sf-menu>li.sfHover>a>span.over_plane
 
 @media only screen and (max-width: 767px) {
 	
+	nav{
+		display:inline-block;
+		margin:0;
+		border-bottom: 5px solid #f6c242;
+		width: 100%
+		}
 
-  	nav{
-		float:none;
-		font:12px/15px Arial, Helvetica, sans-serif;
-		color:#98628b;
-		padding:0px 0px 0px;
+	ul.sf-menu>li{
+		
+		width: 19.5%;
+		height: 50%;
+		
+	}
+	.camera_prev, .camera_next{display: none;}
+	
+	.sf-menu{
+		margin-top: 10%;
+		margin-left: 1%;
+	}
+	
+	.base_txt {
+		font-size: 40%;
+	} 
+
+	ul.sf-menu>li>a{
+		font:bold 100%/240% 'Tinos', Arial, sans-serif;
+		display:block;
+		color:#494848;
+		}
+
+	ul.sf-menu>li>a>span.over_plane{
+		position: absolute;
 		width: 100%;
-		margin: 0 auto;
-		margin-top: 20px !important;
-		background: #fff;
-		padding: 10px;
-	}
-		/*nav:before{
-			content:'Menu:';
-			text-align: left;
-			display:block;
-			margin-bottom:5px;
-			color: #474747;
-			
-		}*/
-	.sf-menu{display:none;float: none;}
-	nav select{
-		font:12px/15px Arial, Helvetica, sans-serif;
-		color:#101010;
-		width:94%;
-		margin: 0 auto;
-		float: none;
-    	outline: none;
-		border:2px solid #f6c242;
+		height: 100%;
+		left: 0;
+		bottom: 0;
+		/* background: #ff755e; */
+		background: #f6c242;
+		opacity: 0;
+		z-index: 0;
+		-webkit-transition:all 0.5s ease;
+		-moz-transition:all 0.5s ease;
+		-o-transition:all 0.5s ease;
+		transition:all 0.5s ease;
+	}	
+	ul.sf-menu>li.current>a, ul.sf-menu>li.sfHover>a, ul.sf-menu>li>a:hover{
+		color:#fff; 
+		text-decoration: none; 
+		line-height: 220%;}
+
+	.sf-menu>li>ul{
+		left:0px;
+		top:88px;
+		width:90px;
+		z-index:99;
+		background: #f6c242; 
+		padding:40px 0 38px 0;
 	}
 
-	nav{border-bottom: none;}
-
+	.sf-menu>li>ul>li {
+		font-size: 12px; 
+		font-weight:normal;
+		position:relative;
+		padding:0; 
+		padding-bottom: 0px;
+		text-align: center;						
+	}
 
 	.date_section {
 		float: none !important;
 		text-align: center !important;
 		margin-top: 0 !important;
 	}
-
-
 
 	.slider_wrapper {margin-top: -11px !important;}
 	

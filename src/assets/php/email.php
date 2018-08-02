@@ -17,6 +17,7 @@ if(empty($errors))
     $allergiesPlusOne = $request->allergiesPlusOne;
     $songsSuggestion = $request->songsSuggestion; 
 
+	//$to_email = "kefiliatrault@gmail.com";
 	$to_email = "kefiliatrault@gmail.com";
 	$contact = "<p><strong>Full Name: </strong> $from_name</p>
                 <p><strong>Email: </strong> $from_email</p>

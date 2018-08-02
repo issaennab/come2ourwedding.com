@@ -77,11 +77,11 @@ select{
     box-shadow: 0 0 8px #88D5E9;
     border: 1px solid #88D5E9;
 }
-.form-style-1 .field-divided{
+.form-style-1 .field-divided {
     width: 97%;
 }
 
-.form-style-1 .field-long{
+.form-style-1 .field-long {
     width: 100%;
 }
 .form-style-1 .field-select{
@@ -108,7 +108,7 @@ select{
 }
 
 @media only screen 
-and (max-device-width: 1920px)
+and (max-device-width: 2561px)
 {
 
     .form-style-1 label {

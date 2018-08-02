@@ -14,6 +14,11 @@ export class MainComponent implements OnInit {
   hours = 12;
   minutes = 0;
   seconds = 0;
+
+  daysX = 0;
+  hoursX = 0;
+  minsX = 0;
+  secX = 0;
   
   image = "Nothing Yet to start!"
 
@@ -26,6 +31,7 @@ export class MainComponent implements OnInit {
     console.log(this.endDate.getTime() - this.currentDate.getTime())
 
     this.rotateImages()
+    
     this.countIt()
 
   }
@@ -40,42 +46,36 @@ export class MainComponent implements OnInit {
       var minutsLeft: number = dateDiff / 60000;
       var secondsLeft = dateDiff / 1000;
 
-      // console.log("Date Diff : " + dateDiff)
-      // console.log("Days Left : " + daysLeft)
+      console.log("Date Diff : " + dateDiff)
+      console.log("Days Left : " + daysLeft)
       // console.log("Hours Left : " + hoursLeft)
       // console.log("Mins Left : " + minutsLeft)
-      console.log("sec Left : " + secondsLeft)
+      // console.log("sec Left : " + secondsLeft)
 
-      this.seconds = minutsLeft * 60;
-      this.seconds = secondsLeft - this.seconds;
+      var hours = (daysLeft - Math.floor(daysLeft)) * 24;
+      // hours = (hoursLeft - hours) < 0 ? 0 : hoursLeft - hours;
+      console.log("hours : " + hours)
+
+      var minutes = (hoursLeft - Math.floor(hoursLeft)) * 60;
+      // minutes = minutsLeft - minutes;
+      console.log("minutes : " + minutes)
+
+      this.seconds = (minutsLeft - Math.floor(minutsLeft)) * 60;
+      // this.seconds = secondsLeft - this.seconds;
       console.log("seconds : " + this.seconds)
 
-      var minutes = hoursLeft * 60;
-      minutes = minutsLeft - minutes;
-      // console.log("minutes : " + minutes)
-
-      var hours = daysLeft * 24;
-      hours = (hoursLeft - hours) < 0 ? 0 : hoursLeft - hours;
-      // console.log("hours : " + hours)
-
       var days = daysLeft;
+      this.daysX = Math.floor(daysLeft);
+      this.hoursX = Math.floor(hours);
+      this.minsX = Math.floor(minutes);
+      this.secX = this.seconds;
 
       // if(days<=0) {days=0;}
       // if(hours<=0) {hours=0;}
       // if(minutes<=0) {minutes=0;}
       // if(seconds<=0) {seconds=0;}
 
-      // this.startCount(days, hours, minutes, this.seconds)
-
     }, 1000)
-  }
-
-  startCount(days, hours, minutes, seconds) {
-    /*document.getElementById("counter").innerHTML="DAYS "+days+", HOURS "+hours+", MINUTES "+minutes+", SECONDS: "+seconds;*/
-    // if(document.getElementById("counter")) {
-    //     document.getElementById("counter").innerHTML="<div class='txt_cntr'><div class='dis-inblock'><div class='counter_section'><div class='plane'>"+days+"</div><p>days</p></div><div class='counter_separate'></div><div class='counter_section'><div class='plane'>"+hours+"</div><p>hours</p></div><div class='counter_separate'></div><div class='counter_section'><div class='plane'>"+minutes+"</div><p>minutes</p></div><div class='counter_separate'></div><div class='counter_section'><div class='plane'>"+seconds+"</div><p>seconds</p></div></div></div>";
-    this.countIt();
-    // }
   }
 
   rotateImages() {
